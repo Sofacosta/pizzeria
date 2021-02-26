@@ -7,9 +7,13 @@ This is my indepentent project to showcase the lesson learned last week: Object-
 ## Specs
  
 ```
-Describe: beepBop()
-Test: "It should return an array of numbers inputted by the user including the number 0"
-Expect(beepBoop(08234)).toEqual(["08234"]);
+Describe: Pizza()
+Test: "It will create Pizza instances with properties: toppings and size"
+Expect(let pizza = new Pizza()).toEqual( {toppings: toppings, size: size});
+
+Describe: Pizza.prototype.calculatePrice()
+Test: "It will define a base price of $10 and calculate extra cost by adding selected toppings"
+Expect(pizza.calculatePrice(["mushrooms", "pepperoni"])).toEqual( {toppings: toppings, size: size});
 
 ```
 
