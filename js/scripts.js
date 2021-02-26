@@ -16,10 +16,15 @@ Pizza.prototype.calculatePrice = function () {
       additions += 2;
     }
   });
+    //if (this.size === "medium") {
+      //additions += 2;
+    //} if (this.size === "large") {
+      //additions += 4; 
+    //} LEFT OFF HERE!!!!
+    }
 
   console.log(additions);
   return basePrice + additions;
-}
 
 // this data will come from the form
 const toppings = ["mushrooms", "pepperoni"];
