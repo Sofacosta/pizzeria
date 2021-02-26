@@ -23,7 +23,7 @@ Expect(pizza.calculatePrice(["mushrooms", "pepperoni"])).toEqual( {toppings: top
 *CSS
 *JQuery
 ## Set up / Installation requirements
-*Download a .zip copy of this repository:https://github.com/Sofacosta/programming-language-suggester by clicking the green "code" button. 
+*Download a .zip copy of this repository: https://github.com/Sofacosta/pizzeria.git by clicking the green "code" button. 
 * Launch the index.html file into your browser
  
 OR
