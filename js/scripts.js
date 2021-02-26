@@ -3,8 +3,7 @@ function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
 } 
-
-Pizza.prototype.calculatePrice = function () {
+Pizza.prototype.calculatePrice = function() {
   // The calculatePrice method on the Pizza prototype caclulates the price of the pizza using the toppings and size information that was gathered from the form and passed to the constructor. A basePrice is defined and toppings prices are calculated using a forEach
   const basePrice = 10;
   let additions = 0;
@@ -22,17 +21,26 @@ Pizza.prototype.calculatePrice = function () {
     sizeModifier += 2;
   } if (this.size === "large") {
     sizeModifier += 4; 
-  } 
+  }
 
-  console.log(additions);
   return basePrice + additions + sizeModifier;
 }
-// this data will come from the form
-const toppings = ["mushrooms", "pepperoni"];
-const size = "medium";
 
-// here we are creating a new pizza order using the Pizza constructor and passing in the data collected from the form
-const pizza = new Pizza(toppings, size);
+// User Interface Logic ------------
 
-// here we are calculating the price of the pizza using the calculatePrice function on the prototype of our newly placed pizza order
-console.log("The price of this fresh, hot pizza is the low sum of only: $" + pizza.calculatePrice());
+$(document).ready(function() {
+  $("#pizza-form").submit(function(event) {
+    event.preventDefault();
+
+    const toppings = $("input[name=toppings]:checked").map(function() {
+      return $(this).val();
+    }).get();
+    const size = $("input[name=size]:checked").val();
+    console.log(toppings);
+    console.log(size);
+    const pizza = new Pizza(toppings, size);
+
+    $('#price').html(`${pizza.calculatePrice()}.00`);
+    $('#response').show();
+  });
+});

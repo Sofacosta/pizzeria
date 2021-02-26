@@ -2,3 +2,7 @@ p {
   margin-top: 20px;
   font-weight: bold;
 }
+
+#response {
+  display: none;
+}
