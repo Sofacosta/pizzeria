@@ -8,6 +8,7 @@ Pizza.prototype.calculatePrice = function () {
   // The calculatePrice method on the Pizza prototype caclulates the price of the pizza using the toppings and size information that was gathered from the form and passed to the constructor. A basePrice is defined and toppings prices are calculated using a forEach
   const basePrice = 10;
   let additions = 0;
+  let sizeModifier = 0;
 
   this.toppings.forEach(function(topping) {
     if (topping === "mushrooms" || topping === "onions" || topping === "extra-cheese" || topping === "black-olives" || topping === "green-peppers") {
@@ -16,16 +17,16 @@ Pizza.prototype.calculatePrice = function () {
       additions += 2;
     }
   });
-    //if (this.size === "medium") {
-      //additions += 2;
-    //} if (this.size === "large") {
-      //additions += 4; 
-    //} LEFT OFF HERE!!!!
-    }
+  
+  if (this.size === "medium") {
+    sizeModifier += 2;
+  } if (this.size === "large") {
+    sizeModifier += 4; 
+  } 
 
   console.log(additions);
-  return basePrice + additions;
-
+  return basePrice + additions + sizeModifier;
+}
 // this data will come from the form
 const toppings = ["mushrooms", "pepperoni"];
 const size = "medium";

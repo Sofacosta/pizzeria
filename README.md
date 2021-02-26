@@ -13,7 +13,11 @@ Expect(let pizza = new Pizza()).toEqual( {toppings: toppings, size: size});
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It will define a base price of $10 and calculate extra cost by adding selected toppings"
-Expect(pizza.calculatePrice(["mushrooms", "pepperoni"])).toEqual( {toppings: toppings, size: size});
+Expect(pizza.calculatePrice(["mushrooms", "pepperoni"])).toEqual({$13});
+
+Describe: Pizza.prototype.calculatePrice()
+Test: "It will define a base price of $10 and calculate additional cost by adding selected toppings and size"
+Expect(pizza.CalculatePrice(["mushrooms", "pepperoni"]),"medium").toEqual({$16});
 
 ```
 
