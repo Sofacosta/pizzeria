@@ -3,7 +3,7 @@
 #### Project initiated: 02-25-2021
 #### By Sofia Acosta
 ## Project Description
-This is my indepentent project to showcase the lesson learned last week: Object-Oriented JavaScript. This is a werbsite for a pizza company where a user can choose one or more individual toppings and a size to order a pizza.      
+This is my indepentent project to showcase the lesson learned last week: Object-Oriented JavaScript. This is a website for a pizza company where a user can choose one or more individual toppings and a size to order a pizza.      
 ## Specs
  
 ```
@@ -22,10 +22,10 @@ Expect(pizza.CalculatePrice(["mushrooms", "pepperoni"]),"medium").toEqual({$16})
 ```
 
 ## Technologies Used
-*HTML
-*Javascript
-*CSS
-*JQuery
+* HTML
+* Javascript
+* CSS
+* JQuery
 ## Set up / Installation requirements
 *Download a .zip copy of this repository: https://github.com/Sofacosta/pizzeria.git by clicking the green "code" button. 
 * Launch the index.html file into your browser
