@@ -34,10 +34,8 @@ $(document).ready(function() {
 
     const toppings = $("input[name=toppings]:checked").map(function() {
       return $(this).val();
-    }).get();
+    }).get(); 
     const size = $("input[name=size]:checked").val();
-    console.log(toppings);
-    console.log(size);
     const pizza = new Pizza(toppings, size);
 
     $('#price').html(`${pizza.calculatePrice()}.00`);

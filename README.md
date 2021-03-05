@@ -9,15 +9,19 @@ This is my indepentent project to showcase the lesson learned last week: Object-
 ```
 Describe: Pizza()
 Test: "It will create Pizza instances with properties: toppings and size"
-Expect(let pizza = new Pizza()).toEqual( {toppings: toppings, size: size});
+let pizza = new Pizza(["mushrooms", "pepperoni"], "medium");
+Expect(pizza.toppings).toEqual(["mushrooms", "pepperoni"]);
+Expect(pizza.size).toEqual("medium");
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It will define a base price of $10 and calculate extra cost by adding selected toppings"
-Expect(pizza.calculatePrice(["mushrooms", "pepperoni"])).toEqual({$13});
+let pizza = new Pizza(["mushrooms", "pepperoni"], "medium");
+Expect(pizza.calculatePrice()).toEqual(13);
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It will define a base price of $10 and calculate additional cost by adding selected toppings and size"
-Expect(pizza.CalculatePrice(["mushrooms", "pepperoni"]),"medium").toEqual({$16});
+let pizza = new Pizza(["mushrooms", "black-olives", "pepperoni"], "large");
+Expect(pizza.calculatePrice()).toEqual(18);
 
 ```
 
