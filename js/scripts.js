@@ -1,10 +1,8 @@
-// Pizza constructor that receives toppings and size data collected from the fomr
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
 } 
 Pizza.prototype.calculatePrice = function() {
-  // The calculatePrice method on the Pizza prototype caclulates the price of the pizza using the toppings and size information that was gathered from the form and passed to the constructor. A basePrice is defined and toppings prices are calculated using a forEach
   const basePrice = 10;
   let additions = 0;
   let sizeModifier = 0;
