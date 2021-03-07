@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     const toppings = $("input[name=toppings]:checked").map(function() {
       return $(this).val();
-    }).get(); 
+    }).get();
     const size = $("input[name=size]:checked").val();
     const pizza = new Pizza(toppings, size);
 
