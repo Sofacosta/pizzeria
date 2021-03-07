@@ -6,3 +6,8 @@ p {
 #response {
   display: none;
 }
+
+#pizza-form {
+  background: rgb(224,174,238);
+  background: radial-gradient(circle, rgba(224,174,238,1) 0%, rgba(221,156,14,1) 79%);  
+}
